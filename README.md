@@ -24,12 +24,22 @@ L'application vise à offrir les fonctionnalités suivantes :
 
 Pour installer et exécuter cette application, suivez les étapes ci-dessous :
 
-1. **Prérequis**: Assurez-vous d'avoir Android Studio installé sur votre machine.
+1. **Prérequis**: Assurez-vous d'avoir Visual Studio Code (ou similaire) installé sur votre machine.
 2. **Clonage du Répertoire**: Utilisez la commande suivante dans votre terminal :
    ```bash
    git clone https://github.com/anagclvs/MonUPN.git
    ```
-3. **Lancement de l'Application**: Ouvrez le projet dans Android Studio et exécutez le fichier MainActivity pour démarrer l'application.
+3. **Lancement de l'Application**: 
+- Ouvrez le projet dans Visual Studio Code.
+- Exécutez la commande suivante dans le terminal pour installer les dépendances nécessaires :
+ ```bash
+   npm install
+   ```
+- Ensuite, lancez l'application avec la commande suivante :
+ ```bash
+   npx expo start
+   ```
+Cela lancera le serveur de développement Expo. Vous pouvez utiliser un émulateur ou l'application Expo Go sur votre appareil mobile pour visualiser l'application.
 
 ### Structure du Projet
 
