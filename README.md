@@ -1,7 +1,7 @@
 # MonUPN
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/anagclvs/MonUPN?label=tag)
-![GitHub tag (with filter)](https://img.shields.io/github/v/tag/anagclvs/MonUPN)
+
 
 
 Bienvenue dans le projet MonUPN, réalisé par Tayeb, Ludjie et Anaëlle, étudiants en Master 1 MIAGE à l'Université Paris Nanterre. Ce projet, conçu sur une période de 2 ans, vise à créer une application mobile dédiée aux étudiants de l'université, offrant une gamme de fonctionnalités pour faciliter la vie sur le campus.
