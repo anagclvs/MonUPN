@@ -1,6 +1,6 @@
 # MonUPN
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/anagclvs/MonUPN?label=latest%20tag)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/anagclvs/MonUPN?label=tag)
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/anagclvs/MonUPN)
 
 
