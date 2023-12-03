@@ -12,8 +12,8 @@ const Profile = () => {
     try {
       // This is not working!
       const result = await user.update({
-        firstName: 'John',
-        lastName: 'Doe',
+        firstName,
+        lastName,
       });
       console.log('🚀 ~ file: profile.tsx:16 ~ onSaveUser ~ result:', result);
     } catch (e) {
@@ -28,7 +28,7 @@ const Profile = () => {
       </Text>
 
       <TextInput placeholder="Prenom" value={firstName} onChangeText={setFirstName} style={styles.inputField}></TextInput>
-      <TextInput placeholder="Nom" value={lastName} onChangeText={setLastName} style={styles.inputField}></TextInput>
+      <TextInput autoCapitalize={"characters"} placeholder="Nom" value={lastName} onChangeText={setLastName} style={styles.inputField}></TextInput>
       <Button onPress={onSaveUser} title="Enregister" color={'#6c47ff'}></Button>
     </View>
   );

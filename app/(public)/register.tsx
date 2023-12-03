@@ -7,6 +7,8 @@ import { Stack } from 'expo-router';
 const Register = () => {
   const { isLoaded, signUp, setActive } = useSignUp();
 
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
   const [pendingVerification, setPendingVerification] = useState(false);
@@ -23,6 +25,8 @@ const Register = () => {
     try {
       // Create the user on Clerk
       await signUp.create({
+        firstName,
+        lastName,
         emailAddress,
         password,
       });
@@ -66,6 +70,8 @@ const Register = () => {
 
       {!pendingVerification && (
         <>
+          <TextInput placeholder="Prenom" value={firstName} onChangeText={setFirstName} style={styles.inputField}></TextInput>
+          <TextInput autoCapitalize={"characters"} placeholder="Nom" value={lastName} onChangeText={setLastName} style={styles.inputField} />
           <TextInput autoCapitalize="none" placeholder="ex: 20002636@parisnanterre.fr" value={emailAddress} onChangeText={setEmailAddress} style={styles.inputField} />
           <TextInput placeholder="Mot de passe" value={password} onChangeText={setPassword} secureTextEntry style={styles.inputField} />
 

@@ -1,4 +1,4 @@
-name: EAS Build
+name: EAS Build # Finalement un build qui marche sans prendre 6h
 on:
   workflow_dispatch:
   push:

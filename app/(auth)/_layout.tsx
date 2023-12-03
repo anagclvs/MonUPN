@@ -37,16 +37,34 @@ const TabsPage = () => {
         }}
         redirect={!isSignedIn}
       />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          headerTitle: 'Mon Profil',
-          tabBarIcon: ({ color, size }) => <Ionicons name="person-outline" size={size} color={color} />,
-          tabBarLabel: 'Mon Profil',
-          headerRight: () => <LogoutButton />,
-        }}
-        redirect={!isSignedIn}
-      />
+        <Tabs.Screen
+            name="map"
+            options={{
+                headerTitle: 'Carte',
+                tabBarIcon: ({ color, size }) => <Ionicons name="map-outline" size={size} color={color} />,
+                tabBarLabel: 'Carte',
+            }}
+            redirect={!isSignedIn}
+        />
+        <Tabs.Screen
+            name="pomodorotool"
+            options={{
+                headerTitle: 'Pomodoro Timer',
+                tabBarIcon: ({ color, size }) => <Ionicons name="timer" size={size} color={color} />,
+                tabBarLabel: 'Outils',
+            }}
+            redirect={!isSignedIn}
+        />
+        <Tabs.Screen
+            name="profile"
+            options={{
+                headerTitle: 'Mon Profil',
+                tabBarIcon: ({ color, size }) => <Ionicons name="person-outline" size={size} color={color} />,
+                tabBarLabel: 'Mon Profil',
+                headerRight: () => <LogoutButton />,
+            }}
+            redirect={!isSignedIn}
+        />
     </Tabs>
   );
 };

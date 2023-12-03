@@ -1,4 +1,4 @@
-name: Build
+name: Build # Build utiser pour sonar cloud
 on:
   push:
     branches:
