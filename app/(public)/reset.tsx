@@ -52,7 +52,7 @@ const PwReset = () => {
         <>
           <TextInput autoCapitalize="none" placeholder="Identifiant UPN" value={emailAddress} onChangeText={setEmailAddress} style={styles.inputField} />
 
-          <Button onPress={onRequestReset} title="Reinitialiser le mot de passe" color={'#6c47ff'}></Button>
+          <Button onPress={onRequestReset} title="Réinitialiser le mot de passe" color={'#6c47ff'}></Button>
         </>
       )}
 

@@ -42,12 +42,12 @@ const Login = () => {
 
       <Link href="/(public)/reset" asChild>
         <Pressable style={styles.button}>
-          <Text>Mot de passe oublie?</Text>
+          <Text>Mot de passe oublié ?</Text>
         </Pressable>
       </Link>
       <Link href="/(public)/register" asChild>
         <Pressable style={styles.button}>
-          <Text>Creer un compte</Text>
+          <Text>Créer un compte</Text>
         </Pressable>
       </Link>
     </View>

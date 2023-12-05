@@ -70,7 +70,7 @@ const Register = () => {
 
       {!pendingVerification && (
         <>
-          <TextInput placeholder="Prenom" value={firstName} onChangeText={setFirstName} style={styles.inputField}></TextInput>
+          <TextInput placeholder="Prénom" value={firstName} onChangeText={setFirstName} style={styles.inputField}></TextInput>
           <TextInput autoCapitalize={"characters"} placeholder="Nom" value={lastName} onChangeText={setLastName} style={styles.inputField} />
           <TextInput autoCapitalize="none" placeholder="ex: 20002636@parisnanterre.fr" value={emailAddress} onChangeText={setEmailAddress} style={styles.inputField} />
           <TextInput placeholder="Mot de passe" value={password} onChangeText={setPassword} secureTextEntry style={styles.inputField} />
