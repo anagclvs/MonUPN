@@ -19,12 +19,12 @@ const PublicLayout = () => {
       <Stack.Screen
         name="register"
         options={{
-          headerTitle: 'Creer un compte'
+          headerTitle: 'Créer un compte'
         }}></Stack.Screen>
       <Stack.Screen
         name="reset"
         options={{
-          headerTitle: 'Reinitialiser le mot de passe',
+          headerTitle: 'Réinitialiser le mot de passe',
         }}></Stack.Screen>
     </Stack>
   );

@@ -13,6 +13,7 @@ const PwReset = () => {
   // Request a passowrd reset code by email
   const onRequestReset = async () => {
     try {
+      // @ts-ignore
       await signIn.create({
         strategy: 'reset_password_email_code',
         identifier: emailAddress+"@parisnanterre.fr",
@@ -26,6 +27,7 @@ const PwReset = () => {
   // Reset the password with the code and the new password
   const onReset = async () => {
     try {
+      // @ts-ignore
       const result = await signIn.attemptFirstFactor({
         strategy: 'reset_password_email_code',
         code,
@@ -35,6 +37,7 @@ const PwReset = () => {
       alert('Password reset successfully');
 
       // Set the user session active, which will log in the user automatically
+      // @ts-ignore
       await setActive({ session: result.createdSessionId });
     } catch (err: any) {
       alert(err.errors[0].message);
