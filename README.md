@@ -47,6 +47,9 @@ Cela lancera le serveur de développement Expo. Vous pouvez utiliser un émulate
 
 La structure du projet est organisée de la manière suivante :
 
+### Accès JIRA
+https://monupn.atlassian.net/jira/software/projects/KAN/boards/1
+
 ### Auteurs
 
 - Anaëlle
