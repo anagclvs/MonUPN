@@ -47,10 +47,10 @@ const TabsPage = () => {
             redirect={!isSignedIn}
         />
         <Tabs.Screen
-            name="pomodorotool"
+            name="tools"
             options={{
-                headerTitle: 'Pomodoro Timer',
-                tabBarIcon: ({ color, size }) => <Ionicons name="timer" size={size} color={color} />,
+                headerTitle: 'Outils',
+                tabBarIcon: ({ color, size }) => <Ionicons name="grid" size={size} color={color} />,
                 tabBarLabel: 'Outils',
             }}
             redirect={!isSignedIn}
@@ -64,6 +64,22 @@ const TabsPage = () => {
                 headerRight: () => <LogoutButton />,
             }}
             redirect={!isSignedIn}
+        />
+        <Tabs.Screen
+                // Name of the route to hide.
+                name="pomodorotool"
+                options={{
+                    // This tab will no longer show up in the tab bar.
+                    href: null,
+                }}
+            />
+        <Tabs.Screen
+            // Name of the route to hide.
+            name="todolist"
+            options={{
+                // This tab will no longer show up in the tab bar.
+                href: null,
+            }}
         />
     </Tabs>
   );
