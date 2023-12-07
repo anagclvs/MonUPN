@@ -41,7 +41,18 @@
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
     "react-native-web": "~0.19.6",
-    "whatwg-url-without-unicode": "^8.0.0-3"
+    "stream-chat-expo": "^5.22.1",
+    "whatwg-url-without-unicode": "^8.0.0-3",
+    "@react-native-community/netinfo": "9.3.10",
+    "expo-av": "~13.4.1",
+    "expo-document-picker": "~11.5.4",
+    "expo-file-system": "~15.4.5",
+    "expo-haptics": "~12.4.0",
+    "expo-image-manipulator": "~11.3.0",
+    "expo-image-picker": "~14.3.2",
+    "expo-media-library": "~15.4.1",
+    "expo-sharing": "~11.5.0",
+    "react-native-svg": "13.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
