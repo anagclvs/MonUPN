@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {FIRESTORE_DB} from "../../FirebaseConfig";
 import {addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc} from "@firebase/firestore";
 import {Entypo, Ionicons} from "@expo/vector-icons";
+import { useUser } from '@clerk/clerk-expo';
 
 export interface Todo {
     done: boolean;
@@ -13,10 +14,13 @@ export interface Todo {
 const List = () => {
     const [todos, setTodos] = useState<any[]>([]);
     const [todo, setTodo] = useState('');
+    const { user } = useUser();
+    const numE = user?.id;
 
 
     useEffect(() => {
-        const todoRef = collection(FIRESTORE_DB, 'todos');
+
+        const todoRef = collection(FIRESTORE_DB, `todos${numE}`);
 
         const subscriber = onSnapshot(todoRef, {
             next: (snapshot) => {
@@ -37,7 +41,7 @@ const List = () => {
     }, []);
     const addTodo = async () => {
         try {
-            const docRef = await addDoc(collection(FIRESTORE_DB, 'todos'), {
+            const docRef = await addDoc(collection(FIRESTORE_DB, `todos${numE}`), {
                 title: todo,
                 done: false
             });
@@ -49,7 +53,7 @@ const List = () => {
     };
 
     const renderTodo = ({ item }: any) => {
-        const ref = doc(FIRESTORE_DB, `todos/${item.id}`);
+        const ref = doc(FIRESTORE_DB, `todos${numE}/${item.id}`);
 
         const toggleDone = async () => {
             updateDoc(ref, { done: !item.done });
