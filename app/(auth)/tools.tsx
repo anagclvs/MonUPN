@@ -11,6 +11,7 @@ const ToolsPage = () => {
     { title: 'Pomodoro Timer', icon: <Ionicons name="timer" style={styles.icon}/>, screen: 'pomodorotool' },
     { title: 'Carte', icon: <Ionicons name="map" style={styles.icon}/>, screen: 'map' },
     { title: 'To-do List', icon: <Ionicons name="list" style={styles.icon}/>, screen: 'todolist' },
+
     // Add more squares as needed
   ];
 
