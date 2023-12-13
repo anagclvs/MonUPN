@@ -61,7 +61,6 @@ const TabsPage = () => {
                 headerTitle: 'Calendrier',
                 tabBarIcon: ({ color, size }) => <Ionicons name="calendar" size={size} color={color} />,
                 tabBarLabel: 'Calendrier',
-                headerRight: () => <LogoutButton />,
             }}
             redirect={!isSignedIn}
         />
