@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import { Agenda } from 'react-native-calendars';
+// @ts-ignore
 import ical from 'ical.js';
 import * as SplashScreen from 'expo-splash-screen';
 
@@ -141,24 +142,24 @@ const styles = StyleSheet.create({
     itemTitle: {
         fontSize: 16,
         fontWeight: 'bold',
-        marginBottom: 2, // marge réduite
+        lineHeight: 20, // Hauteur de ligne ajustée pour le titre
     },
     itemLocation: {
         fontSize: 14,
         color: '#555',
-        marginBottom: 0, // marge réduite à 0
+        lineHeight: 18, // Hauteur de ligne ajustée pour l'emplacement
     },
     itemDescription: {
         fontSize: 14,
         color: '#666',
-        marginTop: 0, // ajoute une petite marge supérieure
+        lineHeight: 18, // Hauteur de ligne ajustée pour la description
     },
     itemHour: {
         fontSize: 14,
         color: '#666',
-        marginBottom: 2, // Espace sous l'heure
+        lineHeight: 18, // Hauteur de ligne ajustée pour l'heure
     },
-
 });
+
 
 export default Calendar;
