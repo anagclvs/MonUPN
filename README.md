@@ -4,7 +4,7 @@
 [![Release](https://img.shields.io/github/release/anagclvs/MonUPN.svg?style=flat-square)](build.gradle)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=anagclvs_MonUPN&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=anagclvs_MonUPN)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=anagclvs_MonUPN&metric=coverage)](https://sonarcloud.io/summary/new_code?id=anagclvs_MonUPN)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/anagclvs/MonUPN/build-and-test.yml)
+[![Build](https://github.com/anagclvs/MonUPN/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/anagclvs/MonUPN/actions/workflows/build-and-test.yml)
 
 
 
