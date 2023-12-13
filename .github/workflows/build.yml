@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Run tests and generate coverage report
-        run: npm run test --testResultsProcessor=jest-sonar-reporter
+        run: npm run test
 
 
       - name: SonarCloud Scan
