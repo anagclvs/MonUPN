@@ -1,11 +1,33 @@
 import React from 'react';
-import {fireEvent, render, waitFor} from '@testing-library/react-native';
+import {fireEvent, render, renderHook, waitFor} from '@testing-library/react-native';
 import PomodoroTimer from '../app/(auth)/pomodorotool';
 import {act} from "react-dom/test-utils";
 import expect from "expect";
+import panResponder from "react-native-web/src/exports/PanResponder";
+import {scheduleNotificationAsync} from "expo-notifications";
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
+jest.mock('expo-notifications', () => ({
+    scheduleNotificationAsync: jest.fn(),
+}));
 
 describe('PomodoroTimer', () => {
+    let focusTime = 25 * 60; // 25 minutes in seconds
+    let breakTime = 5 * 60; // 5 minutes in seconds
+    let time = focusTime; // initial time set to focusTime
+
+// Mock setState functions
+    const setFocusTime = jest.fn((callback) => {
+        focusTime = callback(focusTime);
+        time = focusTime;
+    });
+
+    const setBreakTime = jest.fn((callback) => {
+        breakTime = callback(breakTime);
+    });
+
+    const setTime = jest.fn((newTime) => {
+        time = newTime;
+    });
 
     it('renders correctly with initial focus time', () => {
         const { getByText } = render(<PomodoroTimer />);
@@ -74,5 +96,22 @@ describe('PomodoroTimer', () => {
         jest.useRealTimers();
     });
 
+    it('switches from focus to break after timer ends', async () => {
+        jest.useFakeTimers();
+        const { getByText, findByText } = render(<PomodoroTimer />);
+        const startButton = getByText('Start');
+
+        fireEvent.press(startButton);
+
+        act(() => {
+            jest.advanceTimersByTime(25 * 60000); // Fast forward 25 minutes
+        });
+
+        await waitFor(() => {
+            expect(findByText('BREAK')).toBeTruthy();
+        });
+
+        jest.useRealTimers();
+    });
 
 });
