@@ -1,7 +1,7 @@
 # MonUPN
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/anagclvs/MonUPN?label=tag)
-[![Release](https://img.shields.io/github/release/anagclvs/MonUPN.svg?style=flat-square)](build.gradle)
+[![Release](https://img.shields.io/github/release/anagclvs/MonUPN.svg?style=flat-square)](https://github.com/anagclvs/MonUPN/releases)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=anagclvs_MonUPN&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=anagclvs_MonUPN)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=anagclvs_MonUPN&metric=coverage)](https://sonarcloud.io/summary/new_code?id=anagclvs_MonUPN)
 [![Build](https://github.com/anagclvs/MonUPN/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/anagclvs/MonUPN/actions/workflows/build-and-test.yml)
