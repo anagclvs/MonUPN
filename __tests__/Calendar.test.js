@@ -24,7 +24,11 @@ global.fetch = jest.fn(() =>
 
 describe('Calendar Component', () => {
     beforeEach(() => {
-        jest.clearAllMocks();
+        jest.spyOn(console, 'error').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+        jest.restoreAllMocks();
     });
 
     it('renders correctly', () => {
@@ -35,7 +39,7 @@ describe('Calendar Component', () => {
     it('handles URL input and button press', async () => {
         const { getByPlaceholderText, getByText } = render(<Calendar />);
 
-        act(() => {
+        await act(async () => {
             fireEvent.changeText(getByPlaceholderText('Enter Calendar URL'), 'https://ade.parisnanterre.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?data=e8bc9d64d64e683e741f185c46fb88d11c189d41b00373c599e0bd1e37f2c34657d58ab4c63f8fe92968762d8416ed8d8ddf862f2f96a2054bb5f92ffe7d2126,1')
         });
 
@@ -44,8 +48,10 @@ describe('Calendar Component', () => {
         });
 
         // Check if the fetch was called
-        expect(fetch).toHaveBeenCalledWith('https://ade.parisnanterre.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?data=e8bc9d64d64e683e741f185c46fb88d11c189d41b00373c599e0bd1e37f2c34657d58ab4c63f8fe92968762d8416ed8d8ddf862f2f96a2054bb5f92ffe7d2126,1');
+        await act(async () => {
+            expect(fetch).toHaveBeenCalledWith('https://ade.parisnanterre.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?data=e8bc9d64d64e683e741f185c46fb88d11c189d41b00373c599e0bd1e37f2c34657d58ab4c63f8fe92968762d8416ed8d8ddf862f2f96a2054bb5f92ffe7d2126,1');
         // Additional assertions can be made here
+        });
     });
 
     // Add more tests for rendering agenda items, error handling, etc.
