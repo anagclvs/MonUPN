@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View, Modal, TextInput, Button } from '
 import { Agenda } from 'react-native-calendars';
 import ical from 'ical.js';
 import * as SplashScreen from 'expo-splash-screen';
-import { collection, doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc } from '@firebase/firestore';
 import {FIRESTORE_DB} from "../../FirebaseConfig";
 import { useUser } from '@clerk/clerk-expo';
 
